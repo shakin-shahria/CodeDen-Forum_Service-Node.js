@@ -1,0 +1,107 @@
+<div class="container">
+    <div class="heading">
+        <a class="btn btn_success" href="/">Home</a>
+    </div>
+    <div class="form">
+        <div class="side_img">
+
+        </div>
+        <div class="form_container">
+            <form action="/article" method="post">
+               
+                <input type="text" name="title" placeholder="Title....">
+                <textarea name="des" id="" cols="30" rows="10" placeholder="Your Post"></textarea>
+                <textarea name="info" id="" cols="30" rows="10" placeholder="More info.."></textarea>
+                 <button class="btn btn_info" type="submit">Submit</button>
+
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+<style>
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+.nav {
+    background-color: #343a40;
+    padding: 10px 20px;
+    color: white;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.heading .btn {
+    background-color: #28a745;
+}
+
+/* Form */
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.form_container {
+    margin-left: 20px; /* Adjust spacing between side image and form */
+}
+
+.form_container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_container input,
+.form_container textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.form_container .btn {
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+}
+
+.form_container .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+
+
+</style>
