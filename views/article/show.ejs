@@ -1,625 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!--Head-->
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--CSS Link-->
-    <link rel="stylesheet" href="styles.css?v=<?php echo time(); ?>" />
-    <!--Title of the page-->
-    <title>Registration</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--CSS Link-->
+  <link rel="stylesheet" href="styles.css?v=<?php echo time(); ?>" />
+  <!--Title of the page-->
+  <title>Registration</title>
+</head>
 
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+  :root {
+    --primary-color: #FFAE42;
+    --primary-color-dark: #0f1e6a;
+    --secondary-color: #f9fafe;
+    --text-color: #333333;
+    --white: #ffffff;
+    --max-width: 1300px;
+  }
 
-:root {
-  --primary-color:#FFAE42;
-  --primary-color-dark: #0f1e6a;
-  --secondary-color: #f9fafe;
-  --text-color: #333333;
-  --white: #ffffff;
-  --max-width: 1300px;
-}
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--secondary-color);
+  }
 
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: var(--secondary-color);
-}
-
-/* Nav-bar related CSS */
-nav {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 1rem;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-   border-bottom: 1px solid black; 
-  width:100%;
-  
-}
-
-.nav__logo a {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.nav__links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background-color:white;
-  
-}
-
-.link a {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-color);
-  text-decoration: none;
-  transition: 0.3s;
-  
-}
-
-.link a:hover {
-  color: var(--primary-color);
-  text-decoration: underline;
-
-}
-
-.link a:hover,
-.nav__links .link a:hover {
-  color: var(--primary-color);
-  text-decoration: underline;
-}
-
-.link .nav__btn {
-  padding: 0.5rem 2rem;
-  color: var(--white) !important;
-  background-color: var(--primary-color);
-  border-radius: 5px;
-}
-/* 
-.link .nav__btn:hover {
-  background-color: var(--primary-color-dark);
-}
- */
-
-/* landing-page container related CSS */
-
-
-.container {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 1rem;
-  min-height: calc(100vh - 100px);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
-}
-
-.content__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 25%;
-}
-
-.content__container h1 {
-  font-size: 3rem;
-  font-weight: 400;
-  line-height: 3.5rem;
-  color: var(--primary-color-dark);
-  margin-bottom: 1rem;
-}
-
-.heading__1 {
-  font-weight: 700;
-}
-
-.heading__2 {
-  font-weight: 700;
-  color: var(--primary-color);
-}
-
-.content__container p {
-  font-size: 1rem;
-  color: var(--text-color);
-  margin-bottom: 2rem;
-}
-
-.content__container form {
-  display: flex;
-  align-items: center;
-}
-
-.content__container input {
-  width: 100%;
-  max-width: 300px;
-  padding: 1rem;
-  font-size: 0.8rem;
-  outline: none;
-  border: none;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-}
-
-.content__container button {
-  width: fit-content;
-  padding: 1rem;
-  font-size: 0.8rem;
-  white-space: nowrap;
-  background-color: var(--primary-color);
-  color: var(--white);
-  outline: none;
-  border: none;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.content__container button:hover {
-  background-color: var(--primary-color-dark);
-}
-
-
-
-/* Explore divs container form related CSS */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Existing styles */
-
-.buttons {
-        margin-top: 10px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .btn {
-        padding: 8px 16px;
-        border-radius: 5px;
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-    }
-
-    .btn_readmore {
-        background-color: #007bff;
-        height: 40px;
-    }
-
-    .btn_delete {
-        background-color: #dc3545;
-        height: 40px;
-        margin-left: 15px;
-    }
-
-    .btn_edit {
-        background-color: #ffc107;
-        height: 40px;
-        margin-left: 15px;
-    }
-
-
-/* Footer related CSS */
-footer {
-  background-color: #696969   ;
-  color: #D9D9D9;
-  padding: 20px;
-  margin-top: 500px;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-}
-
-.footer-content p {
-  margin: 0;
-}
-
-.footer-content ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-content ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-.footer-content ul li:last-child {
-  margin-right: 0;
-}
-
-.footer-content ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer-content ul li a:hover {
-  text-decoration: underline;
-}
-
-
-
-
-
-/* Explore divs container form related CSS */
-.explore1{
+  /* Nav-bar related CSS */
+  nav {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    height: 55px;
     display: flex;
-    background: whitesmoke;
-    margin-top: 40px;
-    margin-bottom: 5px;
-    height: 300px;
-    margin-left: 5%;
-    margin-right: 5%;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    width: 100%;
+  }
+
+  .nav__logo a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+  }
+
+  .link a {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .link a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+
+  .link a:hover,
+  .nav__links .link a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+
+  .link .nav__btn {
+    padding: 0.5rem 2rem;
+    color: var(--white) !important;
+    background-color: var(--primary-color);
     border-radius: 5px;
-    justify-content: center;
-    align-items: center;
+  }
 
-}
-
-
-/*Blog Heading 1 */
-/* 
-.heading1{
-    background-color: #dc3545;
-    width: 600px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    
-    margin-left: 30%;
-}
-
-.welcome-to-our-forum{
-
-} */
-
-
-
-
-.heading1 {
-    background-color: #dc3545;
-    width: 600px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 30%;
-}
-
-.welcome-to-our-forum {
-    color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.new-article {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-
-
-/* blog */
-
-.blog{
-    margin-top: 400px;
-    margin-right: 400px;
-}
-
-.blog_post {
-    background-color: #f8f9fa;
-    border: 1px solid #ced4da;
-    border-radius: 8px;
+  /* Footer related CSS */
+  footer {
+    background-color: #696969;
+    color: #D9D9D9;
     padding: 20px;
-    margin-bottom: 20px;
-}
+    margin-top: 500px;
+  }
 
-.blog_post h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.blog_post p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.blog_post h5 {
-    font-style: italic;
-    color: #6c757d;
-    margin-bottom: 10px;
-}
-
-.buttons {
+  .footer-content {
     display: flex;
-    justify-content: flex-start;
-}
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.buttons .btn {
-    padding: 10px 20px;
+  .footer-content p {
+    margin: 0;
+  }
+
+  .footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-content ul li {
+    display: inline;
     margin-right: 10px;
-    border-radius: 5px;
-    text-decoration: none;
+  }
+
+  .footer-content ul li:last-child {
+    margin-right: 0;
+  }
+
+  .footer-content ul li a {
     color: #fff;
-    cursor: pointer;
-}
-
-.buttons .btn_readmore {
-    background-color: #007bff;
-}
-
-.buttons .btn_delete {
-    background-color: #dc3545;
-}
-
-.buttons .btn_edit {
-    background-color: #28a745;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Responsive part CSS */
-
-.image__content li {
-  margin-bottom: 0.5rem;
-}
-
-@media (width < 900px) {
-  .link a:not(.nav__btn) {
-    display: none;
+    text-decoration: none;
   }
 
-  .container {
-    grid-template-columns: repeat(1, 1fr);
+  .footer-content ul li a:hover {
+    text-decoration: underline;
   }
 
-  .content__container {
-    text-align: center;
-  }
-
-  .content__container form {
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .image__container {
-    grid-area: 1/1/2/2;
-  }
-
-  .image__container img {
-    transform: translateY(0) !important;
-  }
-}
-
-
-
-/* container */
-
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+  /* Post section styles */
+  .reg-container {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
     padding: 20px;
-}
+  }
 
-.heading {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.heading h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.single_post {
-    background-color: #f8f9fa;
+  .single_post {
+    background-color: #E0FFFF;
     border: 1px solid #ced4da;
     border-radius: 8px;
     padding: 20px;
-    margin-bottom: 20px;
-}
+    margin-top: 40px;
+    margin-left: 85px;
+    width: 85%;
+    height: 600pxnpm start
+    ;
+  }
 
-.single_post h1 {
+  .single_post h1 {
     font-size: 24px;
     margin-bottom: 10px;
-}
+  }
 
-.single_post p {
+  .single_post p {
     font-size: 16px;
     margin-bottom: 10px;
-}
+  }
 
-.single_post b {
+  .single_post b {
     font-weight: bold;
-}
+  }
 
-.single_post .date {
+  .single_post .date {
     font-style: italic;
     color: #6c757d;
     margin-bottom: 10px;
-}
-
-.btn {
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer;
-}
-
-.btn_success {
-    background-color: #28a745;
-}
-
-.btn_success:hover {
-    background-color: #218838;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
 </style>
 
+<body>
 
+  <!--Nav-bar-->
+  <nav>
+    <div class="nav__logo"><a href="landing_page.html">UIUCodeDen</a></div>
+    <ul class="nav__links">
+      <li class="link"><a href="Explore.html">Explore</a></li>
+      <li class="link"><a href="#">Forum</a></li>
+      <li class="link"><a href="#">Ranking</a></li>
+      <li class="link"><a href="#">Problems</a></li>
+    </ul>
+  </nav>
 
+  <!-- Post section -->
+  <section class="reg-container">
+    <div class="single_post">
+      <h1><%= article.title %></h1>
+      <p><%= article.des %></p>
+      <b><%= article.info %></b>
+      <h5 class="date">
+        <i>
+          <% if (article.createdAt && typeof article.createdAt === 'object') { %>
+            <%= article.createdAt.toLocaleDateString() %>
+          <% } else { %>
+            No Date Available
+          <% } %>
+        </i>
+      </h5>
+    </div>
+  </section>
 
-<!--Body-->
-  <body>
+  <!--Footer-->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 UIUCodeDen. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
 
-     <!--Nav-bar-->
-      <nav>
-         <div class="nav__logo"><a href="landing_page.html">UIUCodeDen</a></div>
-            <ul class="nav__links">
-               <li class="link"><a href="Explore.html">Explore</a></li>
-              
-               <li class="link"><a href="#">Forum</a></li>
-               <li class="link"><a href="#">Ranking</a></li>
-               <li class="link"><a href="#">Problems</a></li>
-               
-            </ul>
-      </nav>
-
-
-    <!-- The registration form elements-->
-    <section class="reg-container">
-
-
-        <div class="container">
-            <!-- <div class="heading">
-                <h1>Welcome to our blog</h1>
-                <a class="btn btn_success" href="/">Home</a>
-            </div> -->
-            <div class="single_post">
-                <h1><%= article.title %></h1>
-                <p><%= article.des %></p>
-                <b><%= article.info %></b>
-                 <h5 class="date">
-                    <i>
-                        <% if (article.createdAt && typeof article.createdAt === 'object') { %>
-                            <%= article.createdAt.toLocaleDateString() %>
-                        <% } else { %>
-                            No Date Available
-                        <% } %>
-                    </i>
-                </h5> 
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-    </section>
-
-    <!--Footer-->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 UIUCodeDen. All rights reserved.</p>
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </div>
-    </footer>
-
-
-
-
-
-
-  </body>
+</body>
 </html>

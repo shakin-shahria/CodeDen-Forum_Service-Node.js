@@ -313,7 +313,7 @@ footer {
 
 
 .heading1 {
-    background-color: whitesmoke;
+    background-color: white;
     width: 600px;
     height: 300px;
     display: flex;
@@ -344,16 +344,22 @@ footer {
 /* blog */
 
 .blog{
-    margin-top: 400px;
-    margin-right: 400px;
+   width: 90%;
+   justify-content: start;
+   align-items: start;
+   justify-self: start;
+   align-self: start;
+    
 }
 
 .blog_post {
+    
     background-color: #f8f9fa;
     border: 1px solid #ced4da;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
+   
 }
 
 .blog_post h1 {
@@ -504,7 +510,7 @@ footer {
         
                         <!-- Buttons -->
                         <div class="buttons">
-                            <a href="/article/<%= element._id %>" class="btn btn_readmore">Read More</a>
+                            <a href="/article/<%= element._id %>" class="btn btn_readmore"> More</a>
         
                             <form action="/article/<%= element._id %>/delete" method="POST">
                                 <button type="submit" class="btn btn_delete">Delete</button>
