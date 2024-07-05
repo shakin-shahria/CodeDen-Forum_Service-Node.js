@@ -1,10 +1,9 @@
-Sure, here's a shorter and simpler README:
 
----
+# CodeDen-Forum_Service
 
-# CodeDen-NodeJS-Forum
+**CodeDen-NodeJS-Forum** is a dynamic forum service build with Node.js.
 
-**CodeDen-NodeJS-Forum** is a dynamic forum service powered by Node.js.
+It allows users to create accounts, start new discussion threads, and reply to existing threads. Threads and replies are organized chronologically, making it easy to follow conversations. Users can also manage their profiles and engage with the community.
 
 ## Features
 
@@ -42,11 +41,5 @@ npm start
 ```
 
 Visit `http://localhost:3000` in your browser.
-
-## License
-
-This project is licensed under the MIT License.
-
----
 
 Feel free to adjust as needed!
