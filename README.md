@@ -1,7 +1,7 @@
 
 # CodeDen-Forum_Service
 
-**CodeDen-NodeJS-Forum** is a dynamic forum service build with Node.js.
+**CodeDen-NodeJS-Forum** is a dynamic forum service build with Node.js and MongoDB.
 
 It allows users to create accounts, start new discussion threads, and reply to existing threads. Threads and replies are organized chronologically, making it easy to follow conversations. Users can also manage their profiles and engage with the community.
 
